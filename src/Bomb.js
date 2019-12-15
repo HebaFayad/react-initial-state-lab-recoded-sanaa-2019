@@ -12,12 +12,14 @@ export default class Bomb extends Component
   
   
   render(){
-    return(
-      <div>
-      
-      </div>
-      
-      )
+     if(this.state.secondsLeft === 0 ){
+            return (<p>Boom!</p>)
+        }
+        else{
+            return(
+            <p>{this.state.secondsLeft} seconds left before I go boom!</p>)
+        } 
+    }
     
   }
   
